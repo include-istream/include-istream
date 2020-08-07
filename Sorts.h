@@ -71,8 +71,8 @@ void Quick_sort(T2 *array,T2 left,T2 right)
         swap(array[i],array[j]);
     }
     swap(array[left],array[j]);
-    Qsort(array, left, j - 1);
-    Qsort(array, j + 1, right);
+    Quick_sort(array, left, j - 1);
+    Quick_sort(array, j + 1, right);
 }
 /*
 struct BiTree
