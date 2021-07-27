@@ -3,8 +3,6 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
-//constexpr auto MAXN = 5010;                
-//#pragma comment(linker, "/STACK:20480")    If your programme has stack limit, please add this sentence. You can change the limit.
 using std::cin;
 using std::cout;
 using std::endl;
