@@ -56,7 +56,7 @@ void SegmentTree<T>::build(int left, int right, int array_num, T value, int tree
 	int mid = (left + right) >> 1;
 	build(left, mid, array_num, value, 2 * tree_num);
 	build(mid + 1, right, array_num, value, 2 * tree_num + 1);
-	sum[tree_num] = sum[T(tree_num) * 2] + sum[T(tree_num) * 2 + 1];
+	sum[tree_num] = sum[ T (tree_num) * 2] + sum[T(tree_num) * 2 + 1];
 }
 //This function adds a node to the tree. And it's number in the array is array_num,
 //value is value, number in the tree is tree_num.
@@ -107,7 +107,8 @@ T SegmentTree<T>::query(int left, int right, int x, int y, int tree_num)
 //This function has the same function as intervalSum() while it's used for interval change.
 
 //These two functions above are "永久标记法".This kind of means is eazy to write, however, if we want
-//to use plus in the Segment Tree, they are invalid. So you are reommended to use "标记下传法".
+//to use multiplication in the Segment Tree, they will be invalid. So you are reommended to use "标记下传法".
+//And don't use the two means in one programme. "永久标记法" will only set a flag while the real value will not change.
 
 
 template<class T>
